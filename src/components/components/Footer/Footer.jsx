@@ -4,11 +4,9 @@ import React from "react";
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-import { List, ListItem, withStyles } from "@material-ui/core";
-import Button from "../../CustomButtons/Button.jsx";
+import {  withStyles } from "@material-ui/core";
+import HeaderLinks from "../Header/HeaderLinks";
 
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
 
 import footerStyle from "../../assets/jss/material-kit-react/components/footerStyle.jsx";
 
@@ -25,57 +23,8 @@ function Footer({ ...props }) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        <div className={classes.left}>
-            <List className={classes.list}>
-                <ListItem className={classes.listItem}>
-                    <Button
-                        color="transparent"
-                        className={
-                            classes.navLink + " " + classes.socialIconsButton
-                        }
-                    >
-                        <i
-                            className={
-                                classes.socialIcons +
-                                " " +
-                                classes.marginRight5 +
-                                " fab fa-facebook"
-                            }
-                        />{" "}
-                        Facebook
-                    </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                    <Button
-                        color="transparent"
-                        className={
-                            classes.navLink + " " + classes.socialIconsButton
-                        }
-                    >
-                        <i
-                            className={
-                                classes.socialIcons +
-                                " " +
-                                classes.marginRight5 +
-                                " fab fa-instagram"
-                            }
-                        />{" "}
-                        Instagram
-                    </Button>
-                </ListItem>
-            </List>
-        </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-          <a
-            href="https://www.creative-tim.com"
-            className={aClasses}
-            target="_blank"
-          >
-            Creative Tim
-          </a>{" "}
-          for a better web.
+            <HeaderLinks />
         </div>
       </div>
     </footer>
